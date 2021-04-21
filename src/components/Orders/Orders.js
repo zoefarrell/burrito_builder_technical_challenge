@@ -8,9 +8,10 @@ const Orders = props => {
         <h3>{order.name}</h3>
         <ul className="ingredient-list">
           {order.ingredients.map((ingredient, index) => {
-            return <li key={index}>{ingredient}</li>
+            return <li key={index}>{ingredient} </li>
           })}
         </ul>
+        <button onClick={() => props.deleteOrder(order.id)}>Delete Order</button>
       </div>
     )
   });
